@@ -37,7 +37,7 @@ public class CustomerDaoImpl implements CustomerDao{
 		//return the results
 		
 		
-		return null;
+		return customers;
 	}
 
 }

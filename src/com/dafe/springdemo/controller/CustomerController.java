@@ -29,7 +29,7 @@ public class CustomerController {
 		List <Customer> theCustomers = customerDao.getCustomers();
 		
 		//add the customer to the spring mvc model
-		theModel.addAttribute(theCustomers);
+		theModel.addAttribute("customers",theCustomers);
 		
 		return "list-customers";
 	}
