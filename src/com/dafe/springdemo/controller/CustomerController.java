@@ -9,25 +9,25 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
-import com.dafe.springdemo.dao.CustomerDao;
 import com.dafe.springdemo.entity.Customer;
+import com.dafe.springdemo.service.CustomerService;
 
 @Controller
 @EnableWebMvc
 @RequestMapping("/customer")
 public class CustomerController {
 
-	//inject the customer dao
+	//inject the customer service
 	
 	@Autowired
-	private CustomerDao customerDao;
+	private CustomerService customerService;
 	
 	
 	@GetMapping("/list")
 	public String lisCustomers(Model theModel) {
 	
 		//get the customer from the dao
-		List <Customer> theCustomers = customerDao.getCustomers();
+		List <Customer> theCustomers = customerService.getCustomers();
 		
 		//add the customer to the spring mvc model
 		theModel.addAttribute("customers",theCustomers);
