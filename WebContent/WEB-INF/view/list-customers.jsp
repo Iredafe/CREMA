@@ -2,9 +2,17 @@
 
 <!DOCTYPE html>
 <html>
+
 <head>
 
 <title>List Customers</title>
+
+
+<!-- reference my styling sheets -->
+
+<link type="text/css"
+		rel="stylesheet"
+		href="${pageContext.request.contextPath}/myresources/css/style.css"/>
 
 </head>
 
