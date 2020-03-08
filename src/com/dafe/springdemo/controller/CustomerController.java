@@ -47,11 +47,6 @@ public String showFormForAdd(Model theModel) {
 	
 	Customer theCustomer= new Customer();
 	theModel.addAttribute("customer",theCustomer);
-	
-	//save the customer using our service
-	
-	CustomerService.saveCustomer(theCustomer);
-	
 	return "customer-form";
 }
 
@@ -60,6 +55,9 @@ public String showFormForAdd(Model theModel) {
 	@PostMapping("/saveCustomer")
 public String saveCustomer(@ModelAttribute("customer") Customer theCustomer) {
 		
+		//save the customer using our service
+		
+		customerService.saveCustomer(theCustomer);
 	
 	return "redirect:/customer/list";}
 
