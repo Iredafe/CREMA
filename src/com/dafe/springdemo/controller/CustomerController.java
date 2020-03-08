@@ -40,6 +40,14 @@ public class CustomerController {
 @GetMapping("/showFormForAdd")
 public String showFormForAdd(Model theModel) {
 	
+	
+	//create a model attribute
+	
+	Customer theCustomer= new Customer();
+	theModel.addAttribute("customer",theCustomer);
+	
+	
+	
 	return "customer-form";
 }
 
