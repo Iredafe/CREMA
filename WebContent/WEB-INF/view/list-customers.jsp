@@ -46,23 +46,35 @@ class="add-button"
 <th>First Name</th>
 <th>Last Name</th>
 <th>Email</th>
+<th>Action</th>
 
-</tr>
 <!-- loop over and print customers -->
 
 <c:forEach var="tempCustomer" items="${customers}">
 
-<!-- use a jsp expression language to retrieve all the data from the model and loop it into the html table -->
+<!-- construct an update link with customer id -->
 
+<c:url var="updateLink" value="/customer/showFormUpdate">
+
+<c:param name="customerId" value="${tempCustomer.id}"/>
+
+</c:url>
+<!-- use a jsp expression language to retrieve all the data from the model and loop it into the html table -->
 <tr>
+
+
+
 <td>${tempCustomer.firstName} </td>
 <td>${tempCustomer.lastName} </td>
 <td> ${tempCustomer.email}</td>
+<td>
+<!-- display the update link -->
+<a href="${updateLink}">Update</a>
+
 
 </tr>
 
 </c:forEach>
-
 
 
 </table>
