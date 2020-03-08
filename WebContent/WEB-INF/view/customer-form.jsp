@@ -26,8 +26,21 @@
 
 <h3>Save - Customer</h3>
 <form:form action ="saveCustomer" modelAttribute="customer" method="POST">
-</form:form>
 
+
+<table>
+<tbody>
+<tr>
+<td><label>First Name:</label></td>
+<td> <form:input path="firstName"/></td>
+</tr>
+</tbody>
+
+
+</table>
+
+</form:form>
 </div>
+
 </body>
 </html>
