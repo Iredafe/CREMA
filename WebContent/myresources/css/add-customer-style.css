@@ -22,9 +22,10 @@ input {
 
 .save {
 	font-weight: bold;
-	width: 130px; 
+	width: 150px; 
 	padding: 5px 10px; 
 	margin-top: 30px;
+	margin-left: 30px;
 	background: #cccccc;
 }
 
