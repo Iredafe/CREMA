@@ -72,15 +72,15 @@ class="add-button"
 
 
 <tr>
-
-
-
 <td>${tempCustomer.firstName} </td>
 <td>${tempCustomer.lastName} </td>
 <td> ${tempCustomer.email}</td>
 <td>
 <!-- display the update link -->
 <a href="${updateLink}">Update</a>
+
+<!-- display the delete link -->
+<a href="${deleteLink}">Delete</a>
 
 | 
 Delete 
