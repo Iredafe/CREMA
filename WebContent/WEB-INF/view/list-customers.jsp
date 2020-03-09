@@ -60,9 +60,8 @@ class="add-button"
 
 </c:url>
 <!-- use a jsp expression language to retrieve all the data from the model and loop it into the html table -->
+
 <tr>
-
-
 
 <td>${tempCustomer.firstName} </td>
 <td>${tempCustomer.lastName} </td>
