@@ -21,7 +21,7 @@
 
 <div id="wrapper">
 <div id="header">
-<h2>CREME - Customer Relationship Manager</h2>
+<h2>CREME APP</h2>
 </div>
 </div>
 
