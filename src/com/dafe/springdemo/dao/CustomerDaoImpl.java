@@ -32,9 +32,7 @@ public class CustomerDaoImpl implements CustomerDao{
 		
 		List <Customer> customers = theQuery.getResultList();
 		
-		
 		//return the results
-		
 		
 		return customers;
 	}
@@ -48,6 +46,20 @@ public class CustomerDaoImpl implements CustomerDao{
 		//save the customer into db
 		
 		currentSession.save(theCustomer);
+	}
+
+	@Override
+	public Customer getCustomer(int theId) {
+
+		//get the current hibernate session
+		
+		Session currentSession = sessionFactory.getCurrentSession();
+		//retrieve or read from database using the primary key
+		
+		Customer theCustomer = currentSession.get(Customer.class, theId);
+		
+		
+		return theCustomer;
 	}
 
 }

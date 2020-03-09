@@ -54,7 +54,7 @@ class="add-button"
 
 <!-- construct an update link with customer id -->
 
-<c:url var="updateLink" value="/customer/showFormUpdate">
+<c:url var="updateLink" value="/customer/showFormForUpdate">
 
 <c:param name="customerId" value="${tempCustomer.id}"/>
 
