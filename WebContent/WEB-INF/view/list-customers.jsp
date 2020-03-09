@@ -60,6 +60,17 @@ class="add-button"
 
 </c:url>
 <!-- use a jsp expression language to retrieve all the data from the model and loop it into the html table -->
+
+<!-- construct an delete link with customer id -->
+
+<c:url var="deleteLink" value="/customer/delete">
+
+<c:param name="customerId" value="${tempCustomer.id}"/>
+
+</c:url>
+<!-- use a jsp expression language to retrieve all the data from the model and loop it into the html table -->
+
+
 <tr>
 
 
