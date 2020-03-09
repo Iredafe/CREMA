@@ -43,9 +43,10 @@ public class CustomerDaoImpl implements CustomerDao{
 		//get current hibernate session
 		
 		Session currentSession = sessionFactory.getCurrentSession();
+
 		//save the customer into db
 		
-		currentSession.save(theCustomer);
+		currentSession.saveOrUpdate(theCustomer);
 	}
 
 	@Override
