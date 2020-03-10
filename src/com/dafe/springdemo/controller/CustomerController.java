@@ -81,7 +81,7 @@ public String saveCustomer(@ModelAttribute("customer") Customer theCustomer) {
 		
 		customerService.deleteCustomer(theId);
 		
-return "/redirect:/customer/delete";
+return "redirect:/customer/list";
 	}
 }
 

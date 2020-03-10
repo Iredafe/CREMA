@@ -71,7 +71,7 @@ public class CustomerDaoImpl implements CustomerDao{
 				Session currentSession = sessionFactory.getCurrentSession();
 		
 				//delete from database using the primary key
-				Query <Customer> theQuery =currentSession.createQuery("delete from Customer where id=:customerId");
+				Query theQuery =currentSession.createQuery("delete from Customer where id=:customerId");
 				
 				theQuery.setParameter("customerId", theId);
 				
